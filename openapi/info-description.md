@@ -65,4 +65,47 @@ Un workspace es un espacio de trabajo aislado de otros espacios, por ejemplo com
 | workspace status | Muestra información sobre el espacio de trabajo especificado | 
 | workspace use | Crea y cambia a un nuevo espacio de trabajo o simplemente cambia  a uno existente | 
 
+También puedes usar el comando ```vtex workspace``` para visualizar los comandos en tu consola.
 
+[Más información](https://www.youtube.com/watch?v=YYo7Ii9_w3s&list=PLTmvmjdoacBR-Dimz5k_DV8-CyLGYfi9i&index=4)
+
+# Init & Link. 
+Iniciar el tema de la tienda & 
+vincularlo con la tienda
+
+Para utilizar store framework, hay que instalar store theme. Para iniciar con la instalación del tema:
+```vtex init``` Nos regresa una lista de opciones, seleccionamos la primera store, confirmamos y se va a generar una copia de un repositorio remoto, que incluye una versión mínima de una aplicación.
+
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-usage-5.png)
+
+A nivel raíz tenemos el archivo 'manifest.json', dentro de sus propiedades tenemos:
+
+**“vendor”: “vtex”**
+Esta propiedad es el responsable de la aplicación ya sea quien la desarrolló o le está 
+dando soporte y su valor es el nombre de la cuenta(tienda)
+
+**“name”**
+Es el nombre de la aplicación
+
+**“versión”**
+Respeta la nomenclatura de la versión
+
+**“builder”**
+Hace referencia a los constructores para traducir los archivos locales y enviarlos al workspace
+
+**"dependencies"**
+Las dependencias son una lista de aplicaciones previamente definidas y desarrolladas que sirven para exportar los diferentes bloques que se van a utilizar en el tema. Si deseamos agregar algún componente, se busca en la documentación y se agrega a esta lista de dependencias.
+
+Para vincular aplicaciones debemos utilizar workspaces de tipo dev Antes de correr el proyecto, en el archivo de manifest.json, se deben cambiar el valor de "vendor" con el nombre de la cuenta, "name" es opcional cambiarlo por el que preferimos o dejarlo, y en "versión" cambiarlo a “0.0.1” que es un patch para una aplicación que apenas se va a desarrollar. Después de estos cambios, entrar a la carpeta en donde se ubica la aplicación y ubicarse en el workspace que estamos trabajando y correr el comando:
+
+```vtex link```
+Nos vincula el proyecto con el navegador, y cada que se realiza un cambio, se actualiza automáticamente
+
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-usage-6.png)
+
+Para desvincular el proyecto utilizamos el comando: 
+
+```vtex unlink```
+Nos desvincula el proyecto del navegador
+
+[Más información](https://www.youtube.com/watch?v=bXjb1ApVDWk&list=PLTmvmjdoacBR-Dimz5k_DV8-CyLGYfi9i&index=5)
