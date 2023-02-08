@@ -1,37 +1,29 @@
-This is an **example** API to demonstrate features of the OpenAPI specification.
+# ¿Qué es VTEX IO? 
+VTEX IO es una plataforma de comercio electrónico que ayuda a las empresas a crear su propio eCommerce y vender sus productos en línea. A través de VTEX podrás diseñar tu comercio digital, gestionar productos, recibir órdenes de compra y realizar cobros.
 
-# Introduction
+## Instalación vía NPM
+De acuerdo a tu sistema operativo, sigue los pasos respectivos para instalar el CLI de VTEX IO en tu computadora.
 
-This API definition is intended to to be a good starting point for
-describing your API in 
-
-[OpenAPI/Swagger
-format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md).
-
-It also demonstrates features of the
-[create-openapi-repo](https://github.com/Redocly/create-openapi-repo) tool
-and 
-
-the [Redoc](https://github.com/Redocly/Redoc) documentation engine. Beyond
-the standard OpenAPI syntax, we use a few 
-
-[vendor
-extensions](https://github.com/Redocly/Redoc/blob/master/docs/redoc-vendor-extensions.md).
+| Sistema Operativo | Instalación | 
+| ----------------- | ----------- |
+| MacOs | 1. Instale **Homebrew** siguiendo las instrucciones del sitio web de **Homebrew** |
+| | 2. Instalar Node.js a través de Homebrew ejecutando el siguiente comando en tu terminal: ```brew install node``` | 
+| | 3. Luego, instalar Yarn : ```brew install Yarn``` | 
+| | 4. Finalmente, instale el VTEX IO CLI : ```yarn global add vtex```|
+| Linux | 1. Instalar Node.js ejecutando el siguiente comando: ```sudo apt install nodejs``` |
+| | 2. Instale Yarn siguiendo la instalación de Yarn para Linux | 
+| | 3. Instale VTEX IO CLI ejecutando el siguiente comando: ```sudo yarn global add vtex``` | 
+| Windows | 1. Descargue e instale Node.js |
+| | 2. Descarga e instala Yarn | 
+| | 3. Usa la terminal de Windows con permisos de administrador |
+| | 4. Instale VTEX IO CLI ejecutando el siguiente comando: ```yarn global add vtex``` |
 
 
-# OpenAPI Specification
+Verifica la instalación usando el comando ```vtex``` te deberá mostrar una lista de comandos de vtex y la versión de vtex instalada como se muestra a continuación:
 
-The goal of The OpenAPI Specification is to define a standard,
-language-agnostic interface to REST APIs which
+![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-vtex-io-cli-usage-0.png) 
 
-allows both humans and computers to discover and understand the capabilities
-of the service without access to source
+### Solución de Problemas de Instalación
+Si al ejecutar ```vtex -v``` aparece la versión es porque fue instalado correctamente, de lo contrario reinicia tu computadora porque podría ser un problema de registro.
 
-code, documentation, or through network traffic inspection. When properly
-defined via OpenAPI, a consumer can 
-
-understand and interact with the remote service with a minimal amount of
-implementation logic. Similar to what
-
-interfaces have done for lower-level programming, OpenAPI removes the
-guesswork in calling the service.
+# VTEX STOREFRONT
