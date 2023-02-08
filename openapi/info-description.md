@@ -41,3 +41,28 @@ Para comenzar a utilizar VTEX IO, primero se debe configurar el entorno de desar
 | vtex whoami | Asegurate de que estás en tu workspace usando este comando. Esto te informará en qué cuenta estás logueado, el correo que estás usando y el nombre de tu workspace donde estás trabajando |
 | vtex ls | Para ver qué dependencias, aplicaciones o qué temas están instaladas en el workspace usamos el comando: Desplegará una lista con todas las aplicaciones o temas que tiene tu workspace | 
 | vtex browse | Para visualizar tu proyecto usamos este comando. Abrirá una ventana en tu navegador con tu proyecto |
+
+# Workspace
+
+## ¿Qué es un Workspace? 
+Un workspace es un espacio de trabajo aislado de otros espacios, por ejemplo como una rama de git. Existen 3 tipos de ambiente en **vtex**:
+
+| Ambiente | Permite | No permite |
+| -------- | ------- | ---------- | 
+| Development | Vinculaciones & Desarrollos | Promover a máster | 
+| Producción  | Instalaciones, Recibir tráfico a nivel de producción y llegar a promover a máster | Vinculaciones para desarrollar apps |
+| Máster | Contenido presentado al usuario final & Contenido 100% validado | 
+
+## Comandos de Workspace
+
+| Comando | Descripción | 
+| ------- | ----------- | 
+| workspace abtest | Crea, finaliza o muestra el estado de una prueba | 
+| workspace delete | Elimina uno o varios espacios de trabajo de la cuenta actual | 
+| workspace list | Enumera todos los espacios de trabajo de la cuenta actual | 
+| workspace promote | Promueve el espacio de trabajo actual para dominar. (Solo funciona para espacios de trabajo de producción) | 
+| workspace reset | Limpia todas las configuraciones de un espacio de trabajo y las vuelve a crear | 
+| workspace status | Muestra información sobre el espacio de trabajo especificado | 
+| workspace use | Crea y cambia a un nuevo espacio de trabajo o simplemente cambia  a uno existente | 
+
+
