@@ -110,6 +110,12 @@ Nos desvincula el proyecto del navegador
 
 [Más información](https://www.youtube.com/watch?v=bXjb1ApVDWk&list=PLTmvmjdoacBR-Dimz5k_DV8-CyLGYfi9i&index=5)
 
+# REACT + PROPS CÓMO CREAR BLOQUES PERSONALIZADOS EN VTEX IO
+Blocks Props, identificadores, blocks
+
+Los blocks son los json desarrollados por VTEX, y son una abstracción de un componente React. Deben estar declarados en las dependencias del manifest.json y editar su contenido en donde se estén utilizando dichos bloques. 
+Para personalizar un componente, en los bloques se hace mediante la propiedad “props”, se debe leer la documentación de VTEX IO, y ubicar los bloques para ver qué propiedades se pueden utilizar en cada bloque.
+Es una buena práctica que cada bloque tenga su identificador, de la siguiente manera:
 
 # Qué páginas compone una tienda
 
