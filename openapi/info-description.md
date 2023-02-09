@@ -110,12 +110,23 @@ Nos desvincula el proyecto del navegador
 
 [Más información](https://www.youtube.com/watch?v=bXjb1ApVDWk&list=PLTmvmjdoacBR-Dimz5k_DV8-CyLGYfi9i&index=5)
 
+# Storefront Apps
+Aprovechando la plataforma VTEX IO, la solución VTEX IO Store Framework ofrece las bases necesarias para cualquier estructura de escaparate, proporcionando bloques de tienda React personalizables y de alta calidad para que pueda crear (en el tiempo de comercialización más rápido posible). Experiencias de compra integrales que nunca se vuelven obsoletas.
+Sin embargo, considerando algunos escenarios comerciales particulares, es posible que sienta la necesidad de soluciones front-end específicas que aún no están cubiertas por nuestros componentes nativos. En este caso, puede desarrollar sus propias aplicaciones de escaparate con React y VTEX IO
+
+
 # REACT + PROPS CÓMO CREAR BLOQUES PERSONALIZADOS EN VTEX IO
 Blocks Props, identificadores, blocks
 
 Los blocks son los json desarrollados por VTEX, y son una abstracción de un componente React. Deben estar declarados en las dependencias del manifest.json y editar su contenido en donde se estén utilizando dichos bloques. 
 Para personalizar un componente, en los bloques se hace mediante la propiedad “props”, se debe leer la documentación de VTEX IO, y ubicar los bloques para ver qué propiedades se pueden utilizar en cada bloque.
 Es una buena práctica que cada bloque tenga su identificador, de la siguiente manera:
+
+# Templates
+
+Los Templates son archivos que contienen el código de las páginas de tu sitio web. Son responsables, entre otras cosas, de determinar cómo aparecerá la información en la pantalla. La estructura de las secciones de la tienda se deben mediante templates, que a su vez mandan a llamar los blocks correspondientes a cada módulo requerido para las diferentes funcionalidades de cada página.
+
+# DESCRIPCIÓN GENERAL DE LA PLATAFORMA VTEX 
 
 # Qué páginas compone una tienda
 
