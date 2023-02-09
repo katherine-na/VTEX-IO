@@ -128,7 +128,7 @@ Los Templates son archivos que contienen el código de las páginas de tu sitio 
 
 # DESCRIPCIÓN GENERAL DE LA PLATAFORMA VTEX 
 
-# Qué páginas compone una tienda
+# Páginas que compone una tienda
 
 ## Home Page
 El home page es la portada de tu tienda web, aquí es donde encontrarás la página de inicio que se muestra en un navegador web cuando se abre la aplicación por primera vez.
@@ -144,15 +144,29 @@ El home page es la portada de tu tienda web, aquí es donde encontrarás la pág
 	legales.
 
 ## PLP  (Product Listing Page) 
-
 En ecommerce es la página destinada a listar una serie de productos que responden a un mismo criterio de búsqueda o clasificación, siendo esa la definición de sus siglas: 
 Página de Listado de Producto.
+
 ![](https://blog.crobox.com/hubfs/Blog%20Post%20Photos/Product%20listing%20page%20design.jpg)
+
 
 ## PDP (Product Detail Page)
 En la estructura de un ecommerce, PDP es la página de descripción de producto o lo que es lo mismo, la ficha del propio producto.
+
 ![](https://blog.crobox.com/hubfs/Blog%20Post%20Photos/2015%20Blog%20Content/PDP%20best%20practices.jpg)
+
 
 ## Checkout
 El checkout en ecommerce es la parte final del proceso de compra, cuando el cliente confirma el carrito con los productos o servicios seleccionados, introduce sus datos y completa el pago. 
+
 ![](https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/wp-content/uploads/2022/09/monki.png)
+
+
+# Nuevas Funcionalidades Checkout
+SE PLANTEA EL REDISEÑO DEL CHECKOUT PARA EVITAR USAR UNA GRAN CANTIDAD DE COMPONENTES PERSONALIZADOS Y LOGRAR USAR LAS NUEVAS FUNCIONALIDADES QUE EL CHECKOUT NOS OFRECE
+
+## Creación de workspace ootb
+Para la creación de nuestro workspace ocuparemos 2 proyectos
+
+- elektra-components-io
+- elektra-io
