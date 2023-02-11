@@ -44,38 +44,3 @@ get:
     '404':
       description: User not found
       $ref: ../components/responses/Problem.yaml
-put:
-  tags:
-    - User
-  summary: Updated user
-  description: This can only be done by the logged in user.
-  operationId: updateUser
-  parameters:
-    - name: username
-      in: path
-      description: The name that needs to be updated
-      required: true
-      schema:
-        type: string
-  security:
-    - main_auth:
-        - 'write:users'
-  requestBody:
-    content:
-      application/json:
-        schema:
-          $ref: ../components/schemas/User.yaml
-      application/xml:
-        schema:
-          $ref: ../components/schemas/User.yaml
-    description: Updated user object
-    required: true
-  responses:
-    '200':
-      description: OK
-    '400':
-      description: Invalid user supplied
-      $ref: ../components/responses/Problem.yaml
-    '404':
-      description: User not found
-      $ref: ../components/responses/Problem.yaml
