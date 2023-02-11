@@ -20,6 +20,9 @@ servers:
         default: www
         description: Your tenant id
   - url: 'https://example.com/api/v1'
+paths:
+  '/users/{username}':
+    $ref: 'paths/users_{username}.yaml'
 components:
   securitySchemes:
     main_auth:
