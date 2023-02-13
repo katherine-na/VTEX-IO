@@ -133,11 +133,11 @@ Los Templates son archivos que contienen el código de las páginas de tu sitio 
 ## Home Page
 El home page es la portada de tu tienda web, aquí es donde encontrarás la página de inicio que se muestra en un navegador web cuando se abre la aplicación por primera vez.
 
-## Header:
+## Header
 	El header hace referencia a la parte superior del sitio web, los usuarios puedan
 	navegar fácilmente por él.
 
-## Footer: 
+## Footer
 	Es la parte inferior de una página web, en la que se incluye una serie de elementos
 	que pueden resultar de interés para el usuario que navega por ella, como enlaces a
 	las categorías principales, información de contacto, redes sociales o enlaces a textos
@@ -165,8 +165,33 @@ El checkout en ecommerce es la parte final del proceso de compra, cuando el clie
 # Nuevas Funcionalidades Checkout
 SE PLANTEA EL REDISEÑO DEL CHECKOUT PARA EVITAR USAR UNA GRAN CANTIDAD DE COMPONENTES PERSONALIZADOS Y LOGRAR USAR LAS NUEVAS FUNCIONALIDADES QUE EL CHECKOUT NOS OFRECE
 
-## Creación de workspace ootb
-Para la creación de nuestro workspace ocuparemos 2 proyectos
+## Order split and delivery split
+Una de las opciones que se planea realizar es la separación de las formas de envío en el pedido.
 
-- elektra-components-io
-- elektra-io
+Con vtex checkout nos es posible hacer una división de pedidos y división de entregas
+
+Se busca lograr que todas las opciones de entrega disponibles se mostrarán en el proceso de Checkout, se busca poder hacer una selección individual de cada producto para el tipo de envío o recoger en tienda y poder juntar varios productos en el mismo envío.
+
+#### Pasos a seguir para la configuración
+
+1. Accederemos a nuestro Admin de vtex
+2. Si no hay pickup points disponibles estos se crearan en la sección de Orders, Inventory & shipping, Pickup Points
+	- Daremos click en Add pickup Point
+	- Se deberá llenar los apartados:
+		- Name
+		- Id
+		- Pickup Point Address
+		- Business Hours
+3. Una vez configurado nuestro pickup point en nuestro menu lateral seleccionaremos Orders y seleccionaremos shipping Strategy
+	- En esta sección se debe crear una "shipping policy", daremos click en el botón create shipping policy.
+	- Se deberá llenar los apartados:
+	- Name
+	- id
+	- Shipping method
+	- Upload shipping Rates, deberemos dar click en choose a file y seleccionar un documento compatible.
+	- Seccion package items
+		- Minimum of items
+		- Minimum value
+		- Maxium value	
+	- Link pickup points se debera habilitar y llenar los apartados:
+		- Pickup points names.
