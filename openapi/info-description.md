@@ -195,3 +195,67 @@ Se busca lograr que todas las opciones de entrega disponibles se mostrarán en e
 		- Maxium value	
 	- Link pickup points se debera habilitar y llenar los apartados:
 		- Pickup points names.
+4. Iremos a la sección Loading Docks -En esta sección deberemos crear un Loading Dock, daremos click en botón create loading dock
+	- Se deberá llenar los apartados:
+		 -Name
+		- id
+		- Sección Shipping policies and Sales Channel
+			- Asignaremos "associated shipping policies" y "sales policy"
+	- Deberemos llenar los apartados Time and Priority
+		- Cost Time
+		- Overhead time
+		- Priority
+	- Se asignara una dirección en el campo Address
+5. Iremos a la seccion Warehouses -En esta sección deberemos crear un Warehouse, daremos click en botón create Warehouse
+	- Se deberá llenar los apartados:
+		- Name
+		- Id
+		- Origin
+			- Daremos click en add loading dock para ligar el warehouse con el loading dock
+		- inStore warehouse (podrá activarse para activar un pickup point) y seleccionar los disponibles.
+6. Iremos a la sección Inventory Management
+	- Se buscara el producto que se quiera dar disponibilidad en el warehouse creado anteriormente y se le dara el inventario correspondiente y se guardaran los cambios.
+
+7. Para demostrar que la configuración fue correcta usaremos la herramienta Shipping Simulator.
+	- Iremos a la seccion Shipping Simulator
+	- Y deberemos llenar los siguientes datos:
+		- Country
+		- Select product
+		- Postal code
+	- Daremos click en calculate y nos arrojara todos los detalles de la compra
+
+8. Para lograr que esto sea mostrado en el checkout de nuestra pagina se deben hacer las siguientes configuraciones:
+
+	- Se debera habilitar el allowMultipleDeliveries ( esto se realizara con un request hecho al orderForm
+	- Se debe recuperar la configuración actual para eso se usara la solicitud de obtener "Get orderForm Configuration" esto para evitar sobrescribir los valores antiguos.
+	- Se realizara una petición tipo POST. https://{accountName}.{environment}.com.br/api/checkout/pvt/configuration/orderForm Con el dato allowMultipleDeliveries habilitado. Update orderForm configuration
+
+9. Realizaremos una configuración dentro del administrador en el apartado de checkout
+
+	- Accederemos a la seccion haciendo click en la lupa del administrador y escribiendo checkout
+	- Daremos click en el engrane de nuestro checkout
+	- Y nos di  rigiremos a la pestaña checkout
+	- Buscaremos la opción Optimized shipping options y se deberá desactivar
+
+10. Para seguir con nuestras configuraciones del checkout debemos hacer 2 configuraciones en las aplicaciones instaladas en vtex (checkout ui custom y social selling)
+	- Checkout ui custom, podemos acceder a esta sección buscando en la lupa que nos ofrece el administrador de vtex.
+
+		- Una vez dentro debemos activar las opciones:
+		- Payment option as accordion
+		- Simplified shipping date
+		- Show item's unit price
+		- Show 'notes' field
+		- Hide e-mail step
+		-  Google Address Form Format
+		- Daremos click en publish
+	- Social selling, podemos acceder a esta seccion buscando desde la lupa de vtex escribiendo "my apps" dentro de este menu buscaremos "social selling" y daremos click en settings.
+
+		- Una vez dentro debemos activar las opciones:
+		- Enables the app
+		- App always enabled by default
+		- App enabled by default for telesales operators
+		- Enables the configuration of seller identifiers ( Active, add utmiCampaing, Add marketingTag)
+		- Visible sharing channels (whatsapp, Facebook Messenger, SMS, Link, Gmail, Email)
+		- Daremos click en Save
+
+## Setting up Cart Abandonment (Trigger)
