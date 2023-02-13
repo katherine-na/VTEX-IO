@@ -31,16 +31,22 @@ Si al ejecutar ```vtex -v``` aparece la versión es porque fue instalado correct
 Basado en la plataforma de desarrollo VTEX IO y la tecnología React , VTEX Store Framework es responsable de construir el Storefront, proporcionando componentes nativos de comercio electrónico, todos escritos en JSON.
 Para comenzar a utilizar VTEX IO, primero se debe configurar el entorno de desarrollo, por lo que se necesita instalar el CLI, loguearse en la cuenta (cliente), crear un espacio de trabajo (workspace), y finalmente acceder a la tienda mediante el espacio de trabajo. 
 
-# Comandos Básicos
+# Configurar Entorno de Desarrollo
+## Comandos Básicos
 
 | Comando | Uso |
 | ------- | --- |
 | vtex login | Esto abrirá una nueva página en el navegador que nos redirigirá a un inicio de sesión | 
-| vtex logout | Para salir de tu inicio de sesión | 
 | vtex use + nombre de tu workspace | Una vez que inicies sesión por defecto estarás en el workspace de Máster, ten cuidado!! Lo siguiente es crear tu propio workspace usando este comando Esto creará tu espacio de trabajo donde podrás realizar tus cambios sin afectar master!! |
 | vtex whoami | Asegurate de que estás en tu workspace usando este comando. Esto te informará en qué cuenta estás logueado, el correo que estás usando y el nombre de tu workspace donde estás trabajando |
 | vtex ls | Para ver qué dependencias, aplicaciones o qué temas están instaladas en el workspace usamos el comando: Desplegará una lista con todas las aplicaciones o temas que tiene tu workspace | 
 | vtex browse | Para visualizar tu proyecto usamos este comando. Abrirá una ventana en tu navegador con tu proyecto |
+| vtex link | Nos vincula el proyecto con el navegador, y cada que se realiza un cambio, se actualiza automáticamente |
+| vtex unlink | Nos desvincula el proyecto del navegador | 
+| vtex logout | Para salir de tu inicio de sesión | 
+
+
+
 
 # Workspace
 
@@ -314,7 +320,6 @@ En otras palabras, al finalizar la compra pueden usar una herramienta con la cap
 Esto le da al usuario confirmación visual de que el pedido se entregará en la dirección requerida. La información de ubicación se completará automáticamente tan pronto como se cargue el punto en el mapa.
 
 ## Cartman
-
 
 Cartman es una herramienta creada para auxiliar al comerciante en el análisis de posibles escenarios en el Checkout, simulando, compartiendo e investigando carritos en tiendas VTEX
 
