@@ -259,3 +259,75 @@ Se busca lograr que todas las opciones de entrega disponibles se mostrarán en e
 		- Daremos click en Save
 
 ## Setting up Cart Abandonment (Trigger)
+
+El carrito abandonado es la funcionalidad de VTEX que envía correos electrónicos a los clientes para recordarles que paguen en un carrito que se ha ensamblado pero no se ha completado.
+
+## Change the price of an item in the shopping cart
+
+En VTEX, las tiendas pueden establecer manualmente el precio de un artículo ( SKU ) disponible en el carrito de pago. Esta característica se llama Precio manual y solo puede ser realizado por personas que tengan los siguientes perfiles de acceso y permiso registrados en VTEX Admin:
+
+-Perfil de acceso: Propietario ( Admin Super ) u Operador del centro de llamadas ( Telesales )
+
+-Permiso: Carrito de compras Acceso completo
+
+La seguridad operativa de esta funcionalidad se basa en controlar el acceso de las personas que tienen perfiles específicos ( mencionados anteriormente ), sin los cuales el precio de un artículo no puede modificarse manualmente. Además, todos los cambios de precios realizados son registrados y rastreables. 
+
+## SmartCheckout - Customer information automatic fill-in
+
+Con SmartCheckout, la información del cliente se completa automáticamente en Checkout, y solo debe ingresar el correo electrónico de su tienda. Esta función reduce el tiempo de compra ya que los clientes no necesitan volver a ingresar sus datos para cada compra realizada en la misma tienda.
+
+- Cliente ( CL )
+
+	- Correo electrónico
+	- Nombre
+	- Apellido
+	- Teléfono de casa
+	- Documento
+	- DocumentType
+
+- Dirección ( AD )
+
+	- Nombre de dirección
+	- DirectionType
+	- País
+	- Estado
+	- Código postal o geocoordenadas
+	- Calle
+	- Nombre del receptor
+
+## Change item limit of same SKU in cart
+
+Puede cambiar la cantidad máxima de artículos del mismo SKU que sus clientes pueden insertar en el carrito en cada pedido.
+
+## Omitting a payment condition
+
+Dado que VTEX permite que se registren múltiples puertas de enlace, adquirentes y su asociación correspondiente con los medios de pago de manera fácil y rápida, algunos usuarios pueden querer incluir promociones o incluso asociaciones, con un medio de pago exclusivo.
+
+## Setting up geolocation at checkout
+
+Esta función permite que las entregas utilicen un punto geográfico como base ( latitud y longitud ) en lugar de un código postal.
+
+La función de geolocalización permite a sus clientes administrar sus propias búsquedas de la dirección de entrega requerida.
+
+En otras palabras, al finalizar la compra pueden usar una herramienta con la capacidad de encontrar direcciones en Google Maps con un icono que marca la posición.
+
+Esto le da al usuario confirmación visual de que el pedido se entregará en la dirección requerida. La información de ubicación se completará automáticamente tan pronto como se cargue el punto en el mapa.
+
+## Cartman
+
+
+Cartman es una herramienta creada para auxiliar al comerciante en el análisis de posibles escenarios en el Checkout, simulando, compartiendo e investigando carritos en tiendas VTEX
+
+### Funciones cartman.
+
+**Obtenga información sobre artículos en el carrito:**
+Al acceder a la Ver detalles del carrito menú, es posible verificar la información específica de cada uno de los productos seleccionados en el carrito
+
+**Agregar ítems específicos al carrito:**
+Agregar ítems por ID de SKU, se pueden agregar nuevos ítems al carrito de acuerdo con su código de identificación (ID de SKU).
+
+**Agregar ítems aleatorios al carrito:**
+Agregar ítems al azar, nuevos ítems del catálogo de la tienda se pueden agregar al carrito al azar (sin especificar qué ítem se agregará).
+
+**Establecer datos de marketing**
+En la opción establecer datos de marketing, puede aplicar cupones de descuento a ítems y promociones específicos en función de la información de marketing.
