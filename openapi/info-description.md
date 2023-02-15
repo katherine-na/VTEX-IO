@@ -138,10 +138,26 @@ Esta es una lista de constructores VTEX IO:
 | pixel | Procesa el código fuente y la configuración de las Pixel Apps en VTEX IO. Los archivos recogidos por este constructor se encuentran en el /pixeldirectorio de la aplicación | No abierta |
 | react | Interpreta el /reactdirectorio, potenciando el desarrollo de componentes de React usando Typescript | Abierta |
 
-# Storefront Apps
+## Permisos para los tipos de builders
+
+# OVERVIEW ADMIN 
+El Admin permite a los comerciantes gestionar todas sus experiencias de comercio digital en un solo lugar, de forma más sencilla e inteligente.
+La barra lateral es el punto de partida para todas las áreas de administración. Vea a continuación los detalles sobre su funcionamiento y posibilidades.
+
+# Storefront Apps Admin
 Aprovechando la plataforma VTEX IO, la solución VTEX IO Store Framework ofrece las bases necesarias para cualquier estructura de escaparate, proporcionando bloques de tienda React personalizables y de alta calidad para que pueda crear (en el tiempo de comercialización más rápido posible). Experiencias de compra integrales que nunca se vuelven obsoletas.
 Sin embargo, considerando algunos escenarios comerciales particulares, es posible que sienta la necesidad de soluciones front-end específicas que aún no están cubiertas por nuestros componentes nativos. En este caso, puede desarrollar sus propias aplicaciones de escaparate con React y VTEX IO
 
+## Instalación de Apps 
+En el apartado de Apps Store, verás la lista de aplicaciones disponibles para la cuenta que estas gestionando.
+
+![](https://help.fromdoppler.com/wp-content/uploads/2018/12/vtex-1-1.jpg)
+
+# Site Editor
+
+![](../docs/storefront.gif)
+
+# Checkout UI
 
 # REACT + PROPS CÓMO CREAR BLOQUES PERSONALIZADOS EN VTEX IO
 Blocks Props, identificadores, blocks
@@ -154,7 +170,6 @@ Es una buena práctica que cada bloque tenga su identificador, de la siguiente m
 
 Los Templates son archivos que contienen el código de las páginas de tu sitio web. Son responsables, entre otras cosas, de determinar cómo aparecerá la información en la pantalla. La estructura de las secciones de la tienda se deben mediante templates, que a su vez mandan a llamar los blocks correspondientes a cada módulo requerido para las diferentes funcionalidades de cada página.
 
-# DESCRIPCIÓN GENERAL DE LA PLATAFORMA VTEX 
 
 # Páginas que compone una tienda
 
