@@ -1,4 +1,4 @@
-# ¿Qué es VTEX IO? 
+<h1 align="center"> ¿Qué es VTEX IO? </h1>
 VTEX IO es una plataforma de comercio electrónico que ayuda a las empresas a crear su propio eCommerce y vender sus productos en línea. A través de VTEX podrás diseñar tu comercio digital, gestionar productos, recibir órdenes de compra y realizar cobros.
 
 ## Instalación vía NPM
