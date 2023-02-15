@@ -31,7 +31,7 @@ Si al ejecutar ```vtex -v``` aparece la versión es porque fue instalado correct
 Basado en la plataforma de desarrollo VTEX IO y la tecnología React , VTEX Store Framework es responsable de construir el Storefront, proporcionando componentes nativos de comercio electrónico, todos escritos en **JSON**.
 Para comenzar a utilizar VTEX IO, primero se debe configurar el entorno de desarrollo, por lo que se necesita instalar el CLI, loguearse en la cuenta **(cliente)**, crear un espacio de trabajo **(workspace)**, y finalmente acceder a la tienda mediante el espacio de trabajo. 
 
-# Configurar Entorno de Desarrollo
+## Configurar Entorno de Desarrollo
 ## Comandos Básicos de VTEX
 
 | Comando | Uso |
@@ -139,6 +139,7 @@ Esta es una lista de constructores VTEX IO:
 | react | Interpreta el /reactdirectorio, potenciando el desarrollo de componentes de React usando Typescript | Abierta |
 
 ## Permisos para los tipos de builders
+
 
 # OVERVIEW ADMIN 
 El Admin permite a los comerciantes gestionar todas sus experiencias de comercio digital en un solo lugar, de forma más sencilla e inteligente.
