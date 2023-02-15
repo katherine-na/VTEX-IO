@@ -28,11 +28,11 @@ Si al ejecutar ```vtex -v``` aparece la versión es porque fue instalado correct
 
 # VTEX STOREFRONT
 
-Basado en la plataforma de desarrollo VTEX IO y la tecnología React , VTEX Store Framework es responsable de construir el Storefront, proporcionando componentes nativos de comercio electrónico, todos escritos en JSON.
-Para comenzar a utilizar VTEX IO, primero se debe configurar el entorno de desarrollo, por lo que se necesita instalar el CLI, loguearse en la cuenta (cliente), crear un espacio de trabajo (workspace), y finalmente acceder a la tienda mediante el espacio de trabajo. 
+Basado en la plataforma de desarrollo VTEX IO y la tecnología React , VTEX Store Framework es responsable de construir el Storefront, proporcionando componentes nativos de comercio electrónico, todos escritos en **JSON**.
+Para comenzar a utilizar VTEX IO, primero se debe configurar el entorno de desarrollo, por lo que se necesita instalar el CLI, loguearse en la cuenta **(cliente)**, crear un espacio de trabajo **(workspace)**, y finalmente acceder a la tienda mediante el espacio de trabajo. 
 
 # Configurar Entorno de Desarrollo
-## Comandos Básicos
+## Comandos Básicos de VTEX
 
 | Comando | Uso |
 | ------- | --- |
@@ -86,7 +86,7 @@ Para utilizar store framework, hay que instalar store theme. Para iniciar con la
 
 A nivel raíz tenemos el archivo 'manifest.json', dentro de sus propiedades tenemos:
 
-**“vendor”: “vtex”**
+**“vendor”: “cuenta”**
 Esta propiedad es el responsable de la aplicación ya sea quien la desarrolló o le está 
 dando soporte y su valor es el nombre de la cuenta(tienda)
 
@@ -97,7 +97,7 @@ Es el nombre de la aplicación
 Respeta la nomenclatura de la versión
 
 **“builder”**
-Hace referencia a los constructores para traducir los archivos locales y enviarlos al workspace
+Hace referencia a los constructores para traducir los archivos locales y enviarlos al workspace. Un builder es responsable de procesar, validar y reenviar un bloque de código determinado a un tiempo de ejecución o un marco capaz de ejecutarlo.
 
 **"dependencies"**
 Las dependencias son una lista de aplicaciones previamente definidas y desarrolladas que sirven para exportar los diferentes bloques que se van a utilizar en el tema. Si deseamos agregar algún componente, se busca en la documentación y se agrega a esta lista de dependencias.
@@ -115,6 +115,28 @@ Para desvincular el proyecto utilizamos el comando:
 Nos desvincula el proyecto del navegador
 
 [Más información](https://www.youtube.com/watch?v=bXjb1ApVDWk&list=PLTmvmjdoacBR-Dimz5k_DV8-CyLGYfi9i&index=5)
+
+## Builder
+La implementación de la aplicación debe relacionarse con los constructores declarados en el archivo del manifest.json de la aplicación y vivir dentro de las carpetas nombradas sobre los constructores de la aplicación.
+
+## Tipos de Builder
+Esta es una lista de constructores VTEX IO:
+
+
+| Nombre | Funcionalidad | Beta Abierta |
+| ------ | ------------- | ------------ |
+| admin | Exporta bloques y rutas al VTEX Admin | No abierta | 
+| assets | Maneja los activos utilizados por los bloques de temas de la tienda. Obtiene todas las rutas de activos utilizadas y las sube a la base de datos VTEX IO | No abierta |
+| configuration | Le permite asignar código perteneciente a configuraciones de servicio a una aplicación que es independiente de la plataforma. | No abierta |
+| dotnet | Interpreta el /dotnetdirectorio, potenciando el desarrollo de servicios backend personalizados | No abierta | 
+| graphql | Procesa las API y los esquemas de GraphQL interpretando .graphqllos .gqlarchivos contenidos en el /graphqldirectorio de la aplicación | No abierta |
+| services | Obtiene los trabajadores de servicio exportados por las aplicaciones instaladas de la cuenta y los agrupa en un solo archivo, lo que permite que la tienda trabaje con varios trabajadores de servicio simultáneament | No abierta| 
+| styles | Exporta configuraciones de CSS para bloques de Store Framework. Al compilar su aplicación, el generador de estilos lee el styles/styles.json y usa un generador de taquiones para producir correctamente el CSS de su tienda | Abierta | 
+| store | Interpreta y valida los bloques, las interfaces y las rutas contenidas en el /storedirectorio de la aplicación del tema, potenciando los componentes de la tienda Store Framework y construyendo el escaparate | Abierta |
+| messages | Exporta mensajes de cadena localizados, potenciando la internacionalización de VTEX IO . Lee .jsonarchivos asociados con diferentes configuraciones regionales dentro del /messagesdirectorio de la aplicación y los pone a disposición de las aplicaciones front-end para que los usen a través de react-intl | Abierta | 
+| node | Interpreta el /nodedirectorio, lo que permite el desarrollo de servicios de back-end personalizados mediante Typescript | No abierta |
+| pixel | Procesa el código fuente y la configuración de las Pixel Apps en VTEX IO. Los archivos recogidos por este constructor se encuentran en el /pixeldirectorio de la aplicación | No abierta |
+| react | Interpreta el /reactdirectorio, potenciando el desarrollo de componentes de React usando Typescript | Abierta |
 
 # Storefront Apps
 Aprovechando la plataforma VTEX IO, la solución VTEX IO Store Framework ofrece las bases necesarias para cualquier estructura de escaparate, proporcionando bloques de tienda React personalizables y de alta calidad para que pueda crear (en el tiempo de comercialización más rápido posible). Experiencias de compra integrales que nunca se vuelven obsoletas.
