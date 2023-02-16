@@ -161,6 +161,26 @@ Manipular su inventario, el envío, establecer algunos puntos de recogida, local
 - Está compuesto por catálogo, precios, promociones
 - Aquí es donde creas cada producto, tienes la información de todas las categorías de productos, precios, etc
 
+**Analytics**
+- Se puede realizar un seguimiento y analizar los pasos de los clientes hasta la finalización de una orden.
+
+**CUSTOMER**
+- Ayuda a la gestión de los datos de sus clientes. Esta aplicación permite al usuario crear, editar y buscar clientes. Es una alternativa a MasterData a la hora de gestionar los documentos de la entidad CL.
+
+**STORE SETUP**
+- Ayuda a trabajar con multiples politicas comerciales 
+- Diferentes modelos o submodelos de para el diseño del sitio web
+- Cambiar la información del front-end editandolo
+- Establecer estilos 
+
+**Marketplace**
+- Trabajar con vendedores, integraciones con ofertas de texto
+
+**ACCOUNT SETTINGS**
+- Crear nuevos usuarios, otorgar derechos de acceso a diferentes tipos de usuario
+
+**Installed Apps**
+- Instalar aplicaciones y aplicaciones ya instaladas
 
 # Storefront Apps Admin
 Aprovechando la plataforma VTEX IO, la solución VTEX IO Store Framework ofrece las bases necesarias para cualquier estructura de escaparate, proporcionando bloques de tienda React personalizables y de alta calidad para que pueda crear (en el tiempo de comercialización más rápido posible). Experiencias de compra integrales que nunca se vuelven obsoletas.
