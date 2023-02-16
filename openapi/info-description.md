@@ -161,7 +161,7 @@ Manipular su inventario, el envío, establecer algunos puntos de recogida, local
 - Está compuesto por catálogo, precios, promociones
 - Aquí es donde creas cada producto, tienes la información de todas las categorías de productos, precios, etc
 
-**Analytics**
+**ANALYTICS**
 - Se puede realizar un seguimiento y analizar los pasos de los clientes hasta la finalización de una orden.
 
 **CUSTOMER**
@@ -173,14 +173,15 @@ Manipular su inventario, el envío, establecer algunos puntos de recogida, local
 - Cambiar la información del front-end editandolo
 - Establecer estilos 
 
-**Marketplace**
+**MARKETPLACE**
 - Trabajar con vendedores, integraciones con ofertas de texto
 
 **ACCOUNT SETTINGS**
 - Crear nuevos usuarios, otorgar derechos de acceso a diferentes tipos de usuario
 
-**Installed Apps**
+**INSTALLED APPS**
 - Instalar aplicaciones y aplicaciones ya instaladas
+
 
 # Storefront Apps Admin
 Aprovechando la plataforma VTEX IO, la solución VTEX IO Store Framework ofrece las bases necesarias para cualquier estructura de escaparate, proporcionando bloques de tienda React personalizables y de alta calidad para que pueda crear (en el tiempo de comercialización más rápido posible). Experiencias de compra integrales que nunca se vuelven obsoletas.
@@ -211,29 +212,32 @@ Para usar Site Editor, vaya al administrador de su tienda y haga clic en Configu
 # Checkout UI
 La aplicación personalizada de la interfaz de usuario de Checkout es responsable de personalizar la interfaz de usuario de Checkout de su tienda a través de la interfaz del administrador.
 
+## Caracteristicas
 
-# REACT + PROPS CÓMO CREAR BLOQUES PERSONALIZADOS EN VTEX IO
-Blocks Props, identificadores, blocks
-
-Los blocks son los json desarrollados por VTEX, y son una abstracción de un componente React. Deben estar declarados en las dependencias del manifest.json y editar su contenido en donde se estén utilizando dichos bloques. 
-Para personalizar un componente, en los bloques se hace mediante la propiedad “props”, se debe leer la documentación de VTEX IO, y ubicar los bloques para ver qué propiedades se pueden utilizar en cada bloque.
-Es una buena práctica que cada bloque tenga su identificador, de la siguiente manera:
-
-# Templates
-
-Los Templates son archivos que contienen el código de las páginas de tu sitio web. Son responsables, entre otras cosas, de determinar cómo aparecerá la información en la pantalla. La estructura de las secciones de la tienda se deben mediante templates, que a su vez mandan a llamar los blocks correspondientes a cada módulo requerido para las diferentes funcionalidades de cada página.
+	- Cambiar exhibición de métodos de pago
+	- Fecha de envío simplificada
+	- Mostrar el precio unitario del artículo
+	- Mostrar campo 'notas'
+	- Cambiar estilos de texto
+	- Cambiar estilos de bloques
+	- Cambiar colores
+	- Área CSS avanzada
+	- Área avanzada de Javascript
+	- Seguimiento de cambios
+![](https://extensions.vtexassets.com/arquivos/ids/156909/image-c6e0152bdb674530bbe1bce749692f0a.jpg?v=637456364396300000)
+![](https://extensions.vtexassets.com/arquivos/ids/156910/image-3309f98fd23b426682df3c631d2f9426.jpg?v=637456364082130000)
+![](https://extensions.vtexassets.com/arquivos/ids/156911/image-515d02f438fd4935a460db7e66b072a5.jpg?v=637456364153070000)
 
 
 # Páginas que compone una tienda
-
 ## Home Page
 El home page es la portada de tu tienda web, aquí es donde encontrarás la página de inicio que se muestra en un navegador web cuando se abre la aplicación por primera vez.
 
-## Header
+### Header
 	El header hace referencia a la parte superior del sitio web, los usuarios puedan
 	navegar fácilmente por él.
 
-## Footer
+### Footer
 	Es la parte inferior de una página web, en la que se incluye una serie de elementos
 	que pueden resultar de interés para el usuario que navega por ella, como enlaces a
 	las categorías principales, información de contacto, redes sociales o enlaces a textos
@@ -258,4 +262,13 @@ El checkout en ecommerce es la parte final del proceso de compra, cuando el clie
 ![](https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/wp-content/uploads/2022/09/monki.png)
 
 
+# REACT + PROPS CÓMO CREAR BLOQUES PERSONALIZADOS EN VTEX IO
+Blocks Props, identificadores, blocks
 
+Los blocks son los json desarrollados por VTEX, y son una abstracción de un componente React. Deben estar declarados en las dependencias del manifest.json y editar su contenido en donde se estén utilizando dichos bloques. 
+Para personalizar un componente, en los bloques se hace mediante la propiedad “props”, se debe leer la documentación de VTEX IO, y ubicar los bloques para ver qué propiedades se pueden utilizar en cada bloque.
+Es una buena práctica que cada bloque tenga su identificador, de la siguiente manera:
+
+# Templates
+
+Los Templates son archivos que contienen el código de las páginas de tu sitio web. Son responsables, entre otras cosas, de determinar cómo aparecerá la información en la pantalla. La estructura de las secciones de la tienda se deben mediante templates, que a su vez mandan a llamar los blocks correspondientes a cada módulo requerido para las diferentes funcionalidades de cada página.
