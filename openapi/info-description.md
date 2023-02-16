@@ -31,8 +31,8 @@ Si al ejecutar ```vtex -v``` aparece la versión es porque fue instalado correct
 Basado en la plataforma de desarrollo VTEX IO y la tecnología React , VTEX Store Framework es responsable de construir el Storefront, proporcionando componentes nativos de comercio electrónico, todos escritos en **JSON**.
 Para comenzar a utilizar VTEX IO, primero se debe configurar el entorno de desarrollo, por lo que se necesita instalar el CLI, loguearse en la cuenta **(cliente)**, crear un espacio de trabajo **(workspace)**, y finalmente acceder a la tienda mediante el espacio de trabajo. 
 
-## Configurar Entorno de Desarrollo
-## Comandos Básicos de VTEX
+## Configurar Entorno de Desarrollo 
+Para configurar el entorno de desarrollo lo hacemos mediante comandos de vtex, estos comandos nos ayudan a crear nuestro entorno donde podemos desarrollar, en esta tabla encontraras los comandos que debes seguir en el mismo orden:
 
 | Comando | Uso |
 | ------- | --- |
@@ -139,11 +139,28 @@ Esta es una lista de constructores VTEX IO:
 | react | Interpreta el /reactdirectorio, potenciando el desarrollo de componentes de React usando Typescript | Abierta |
 
 ## Permisos para los tipos de builders
-
+Cada cuenta y socio de VTEX puede usar libremente VTEX IO para desarrollar componentes de escaparate personalizados, lo que significa que la plataforma funciona como una solución beta abierta cuando se trata de proyectos React.
 
 # OVERVIEW ADMIN 
 El Admin permite a los comerciantes gestionar todas sus experiencias de comercio digital en un solo lugar, de forma más sencilla e inteligente.
 La barra lateral es el punto de partida para todas las áreas de administración. Vea a continuación los detalles sobre su funcionamiento y posibilidades.
+
+![](https://images.ctfassets.net/alneenqid6w5/68DVYFXEFfShDhVJLoP90E/ab49f60e0a7fccda830f4f7cfccdc32b/paginainicial.en.png)
+
+**HOME** 
+- Información General 
+
+**ORDERS**
+- En el Administrador de Órdenes podemos ver todo lo relacionado con las compras que ocurren en su sitio web 
+Manipular su inventario, el envío, establecer algunos puntos de recogida, localizador de tiendas
+
+**TRANSACTIONS**
+- Se establecen todos sus pagos, las ofertas de impuestos y una amplia gama de pagos 
+
+**PRODUCTS**
+- Está compuesto por catálogo, precios, promociones
+- Aquí es donde creas cada producto, tienes la información de todas las categorías de productos, precios, etc
+
 
 # Storefront Apps Admin
 Aprovechando la plataforma VTEX IO, la solución VTEX IO Store Framework ofrece las bases necesarias para cualquier estructura de escaparate, proporcionando bloques de tienda React personalizables y de alta calidad para que pueda crear (en el tiempo de comercialización más rápido posible). Experiencias de compra integrales que nunca se vuelven obsoletas.
@@ -155,10 +172,25 @@ En el apartado de Apps Store, verás la lista de aplicaciones disponibles para l
 ![](https://help.fromdoppler.com/wp-content/uploads/2018/12/vtex-1-1.jpg)
 
 # Site Editor
+Site Editor es una interfaz gráfica para administrar el contenido de su escaparate. Le permite crear, editar, publicar y programar cambios en los componentes y el comportamiento de su escaparate.  
+Para usar Site Editor, vaya al administrador de su tienda y haga clic en Configuración de la tienda > CMS > Site Editor . Verás las principales herramientas disponibles en la interfaz gráfica.
 
-![](../docs/storefront.gif)
+
+![](https://images.ctfassets.net/alneenqid6w5/5K3z9KH8VLYFh0iYA4UFDX/216b3664d5d3f8b6d901a0b8cf427906/site-editor-ui-en.png)
+
+| Herramienta | Descripcion |
+| ----------- | ----------- |
+| Configuración regional vinculante | Seleccione la configuración regional de enlace a la que desea aplicar los cambios de contenido. Por ejemplo, inglés (en-GB), portugués (pt-BR) o español (es-AR) |
+| URL | Navega entre las páginas de tu tienda |
+| Seleccione un bloque | Seleccione el bloque en el que desea crear o modificar contenido |
+| Modo de vista	| Verifique los diferentes modos de visualización para asegurarse de que su contenido se muestre correctamente en dispositivos móviles, tabletas y computadoras de escritorio |
+| Avance | Vea una vista previa del contenido de su escaparate en Site Editor |
+| Bloques | Agregue y edite bloques (por ejemplo, Banner, Menú o Pie de página) para crear y personalizar su escaparate |
+
 
 # Checkout UI
+La aplicación personalizada de la interfaz de usuario de Checkout es responsable de personalizar la interfaz de usuario de Checkout de su tienda a través de la interfaz del administrador.
+
 
 # REACT + PROPS CÓMO CREAR BLOQUES PERSONALIZADOS EN VTEX IO
 Blocks Props, identificadores, blocks
@@ -206,171 +238,4 @@ El checkout en ecommerce es la parte final del proceso de compra, cuando el clie
 ![](https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/wp-content/uploads/2022/09/monki.png)
 
 
-# Nuevas Funcionalidades Checkout
-SE PLANTEA EL REDISEÑO DEL CHECKOUT PARA EVITAR USAR UNA GRAN CANTIDAD DE COMPONENTES PERSONALIZADOS Y LOGRAR USAR LAS NUEVAS FUNCIONALIDADES QUE EL CHECKOUT NOS OFRECE
 
-## Order split and delivery split
-Una de las opciones que se planea realizar es la separación de las formas de envío en el pedido.
-
-Con vtex checkout nos es posible hacer una división de pedidos y división de entregas
-
-Se busca lograr que todas las opciones de entrega disponibles se mostrarán en el proceso de Checkout, se busca poder hacer una selección individual de cada producto para el tipo de envío o recoger en tienda y poder juntar varios productos en el mismo envío.
-
-#### Pasos a seguir para la configuración
-
-1. Accederemos a nuestro Admin de vtex
-2. Si no hay pickup points disponibles estos se crearan en la sección de Orders, Inventory & shipping, Pickup Points
-	- Daremos click en Add pickup Point
-	- Se deberá llenar los apartados:
-		- Name
-		- Id
-		- Pickup Point Address
-		- Business Hours
-3. Una vez configurado nuestro pickup point en nuestro menu lateral seleccionaremos Orders y seleccionaremos shipping Strategy
-	- En esta sección se debe crear una "shipping policy", daremos click en el botón create shipping policy.
-	- Se deberá llenar los apartados:
-	- Name
-	- id
-	- Shipping method
-	- Upload shipping Rates, deberemos dar click en choose a file y seleccionar un documento compatible.
-	- Seccion package items
-		- Minimum of items
-		- Minimum value
-		- Maxium value	
-	- Link pickup points se debera habilitar y llenar los apartados:
-		- Pickup points names.
-4. Iremos a la sección Loading Docks -En esta sección deberemos crear un Loading Dock, daremos click en botón create loading dock
-	- Se deberá llenar los apartados:
-		 -Name
-		- id
-		- Sección Shipping policies and Sales Channel
-			- Asignaremos "associated shipping policies" y "sales policy"
-	- Deberemos llenar los apartados Time and Priority
-		- Cost Time
-		- Overhead time
-		- Priority
-	- Se asignara una dirección en el campo Address
-5. Iremos a la seccion Warehouses -En esta sección deberemos crear un Warehouse, daremos click en botón create Warehouse
-	- Se deberá llenar los apartados:
-		- Name
-		- Id
-		- Origin
-			- Daremos click en add loading dock para ligar el warehouse con el loading dock
-		- inStore warehouse (podrá activarse para activar un pickup point) y seleccionar los disponibles.
-6. Iremos a la sección Inventory Management
-	- Se buscara el producto que se quiera dar disponibilidad en el warehouse creado anteriormente y se le dara el inventario correspondiente y se guardaran los cambios.
-
-7. Para demostrar que la configuración fue correcta usaremos la herramienta Shipping Simulator.
-	- Iremos a la seccion Shipping Simulator
-	- Y deberemos llenar los siguientes datos:
-		- Country
-		- Select product
-		- Postal code
-	- Daremos click en calculate y nos arrojara todos los detalles de la compra
-
-8. Para lograr que esto sea mostrado en el checkout de nuestra pagina se deben hacer las siguientes configuraciones:
-
-	- Se debera habilitar el allowMultipleDeliveries ( esto se realizara con un request hecho al orderForm
-	- Se debe recuperar la configuración actual para eso se usara la solicitud de obtener "Get orderForm Configuration" esto para evitar sobrescribir los valores antiguos.
-	- Se realizara una petición tipo POST. https://{accountName}.{environment}.com.br/api/checkout/pvt/configuration/orderForm Con el dato allowMultipleDeliveries habilitado. Update orderForm configuration
-
-9. Realizaremos una configuración dentro del administrador en el apartado de checkout
-
-	- Accederemos a la seccion haciendo click en la lupa del administrador y escribiendo checkout
-	- Daremos click en el engrane de nuestro checkout
-	- Y nos di  rigiremos a la pestaña checkout
-	- Buscaremos la opción Optimized shipping options y se deberá desactivar
-
-10. Para seguir con nuestras configuraciones del checkout debemos hacer 2 configuraciones en las aplicaciones instaladas en vtex (checkout ui custom y social selling)
-	- Checkout ui custom, podemos acceder a esta sección buscando en la lupa que nos ofrece el administrador de vtex.
-
-		- Una vez dentro debemos activar las opciones:
-		- Payment option as accordion
-		- Simplified shipping date
-		- Show item's unit price
-		- Show 'notes' field
-		- Hide e-mail step
-		-  Google Address Form Format
-		- Daremos click en publish
-	- Social selling, podemos acceder a esta seccion buscando desde la lupa de vtex escribiendo "my apps" dentro de este menu buscaremos "social selling" y daremos click en settings.
-
-		- Una vez dentro debemos activar las opciones:
-		- Enables the app
-		- App always enabled by default
-		- App enabled by default for telesales operators
-		- Enables the configuration of seller identifiers ( Active, add utmiCampaing, Add marketingTag)
-		- Visible sharing channels (whatsapp, Facebook Messenger, SMS, Link, Gmail, Email)
-		- Daremos click en Save
-
-## Setting up Cart Abandonment (Trigger)
-
-El carrito abandonado es la funcionalidad de VTEX que envía correos electrónicos a los clientes para recordarles que paguen en un carrito que se ha ensamblado pero no se ha completado.
-
-## Change the price of an item in the shopping cart
-
-En VTEX, las tiendas pueden establecer manualmente el precio de un artículo ( SKU ) disponible en el carrito de pago. Esta característica se llama Precio manual y solo puede ser realizado por personas que tengan los siguientes perfiles de acceso y permiso registrados en VTEX Admin:
-
--Perfil de acceso: Propietario ( Admin Super ) u Operador del centro de llamadas ( Telesales )
-
--Permiso: Carrito de compras Acceso completo
-
-La seguridad operativa de esta funcionalidad se basa en controlar el acceso de las personas que tienen perfiles específicos ( mencionados anteriormente ), sin los cuales el precio de un artículo no puede modificarse manualmente. Además, todos los cambios de precios realizados son registrados y rastreables. 
-
-## SmartCheckout - Customer information automatic fill-in
-
-Con SmartCheckout, la información del cliente se completa automáticamente en Checkout, y solo debe ingresar el correo electrónico de su tienda. Esta función reduce el tiempo de compra ya que los clientes no necesitan volver a ingresar sus datos para cada compra realizada en la misma tienda.
-
-- Cliente ( CL )
-
-	- Correo electrónico
-	- Nombre
-	- Apellido
-	- Teléfono de casa
-	- Documento
-	- DocumentType
-
-- Dirección ( AD )
-
-	- Nombre de dirección
-	- DirectionType
-	- País
-	- Estado
-	- Código postal o geocoordenadas
-	- Calle
-	- Nombre del receptor
-
-## Change item limit of same SKU in cart
-
-Puede cambiar la cantidad máxima de artículos del mismo SKU que sus clientes pueden insertar en el carrito en cada pedido.
-
-## Omitting a payment condition
-
-Dado que VTEX permite que se registren múltiples puertas de enlace, adquirentes y su asociación correspondiente con los medios de pago de manera fácil y rápida, algunos usuarios pueden querer incluir promociones o incluso asociaciones, con un medio de pago exclusivo.
-
-## Setting up geolocation at checkout
-
-Esta función permite que las entregas utilicen un punto geográfico como base ( latitud y longitud ) en lugar de un código postal.
-
-La función de geolocalización permite a sus clientes administrar sus propias búsquedas de la dirección de entrega requerida.
-
-En otras palabras, al finalizar la compra pueden usar una herramienta con la capacidad de encontrar direcciones en Google Maps con un icono que marca la posición.
-
-Esto le da al usuario confirmación visual de que el pedido se entregará en la dirección requerida. La información de ubicación se completará automáticamente tan pronto como se cargue el punto en el mapa.
-
-## Cartman
-
-Cartman es una herramienta creada para auxiliar al comerciante en el análisis de posibles escenarios en el Checkout, simulando, compartiendo e investigando carritos en tiendas VTEX
-
-### Funciones cartman.
-
-**Obtenga información sobre artículos en el carrito:**
-Al acceder a la Ver detalles del carrito menú, es posible verificar la información específica de cada uno de los productos seleccionados en el carrito
-
-**Agregar ítems específicos al carrito:**
-Agregar ítems por ID de SKU, se pueden agregar nuevos ítems al carrito de acuerdo con su código de identificación (ID de SKU).
-
-**Agregar ítems aleatorios al carrito:**
-Agregar ítems al azar, nuevos ítems del catálogo de la tienda se pueden agregar al carrito al azar (sin especificar qué ítem se agregará).
-
-**Establecer datos de marketing**
-En la opción establecer datos de marketing, puede aplicar cupones de descuento a ítems y promociones específicos en función de la información de marketing.
