@@ -272,3 +272,59 @@ Es una buena práctica que cada bloque tenga su identificador, de la siguiente m
 # Templates
 
 Los Templates son archivos que contienen el código de las páginas de tu sitio web. Son responsables, entre otras cosas, de determinar cómo aparecerá la información en la pantalla. La estructura de las secciones de la tienda se deben mediante templates, que a su vez mandan a llamar los blocks correspondientes a cada módulo requerido para las diferentes funcionalidades de cada página.
+
+## Configuración de Templates
+Las plantillas son responsables de declarar bloques que, una vez renderizados,
+definirán el conjunto de componentes para las páginas de su sitio web, como la
+página de inicio, la página del producto, la página de resultados de búsqueda,
+etc.
+
+La aplicación Store Theme ya implementa plantillas básicas para todas y cada
+una de las páginas de tu tienda en sus archivos y esto es lo que permite que su
+tienda muestre los componentes predeterminados de VTEX Store Framework,
+incluso cuando no haya realizado ninguna configuración en el
+código blocks.json blocks.jsonc
+
+Para editar plantillas y, en consecuencia, los componentes de su tienda,
+debemos observar más de cerca qué son los bloques y cómo se aplican al tema
+de la tienda.
+
+Los bloques son la abstracción mínima de Store Framework de los
+componentes de React que queremos ver en la interfaz de usuario . Los
+bloques son pequeños fragmentos de código, exportados a la plataforma por
+aplicaciones independientes que configuran cómo se representarán en su sitio
+web.
+
+Declaramos un nuevo bloque en una plantilla para agregar un nuevo
+componente a una página, de la misma manera que se puede excluir un
+componente de una página simplemente eliminando un bloque de una plantilla.
+La carpeta encargada de organizar los bloques y plantillas de tu tienda se
+llama .store
+
+En ella, puedes declarar todos tus bloques o crear tantos archivos y carpetas
+como quieras. También puede declarar bloques usando la subcarpeta.
+Los bloques son fragmentos de código exportados por las aplicaciones VTEX
+Store Framework. Esto significa que cada vez que se usa un bloque en su tema,
+la aplicación detrás de él debe declararse en su lista de dependencias del tema
+de la tienda.
+
+Al declarar un nuevo bloque en su aplicación Store Theme, asegúrese de
+verificar que la aplicación responsable de ese bloque aparezca como una
+dependencia. Si no es así, abra el archivo y agregue el nombre de la aplicación
+y la versión deseada en la lista, siguiendo este
+formato: .manifest.jsondependencies"vtex.{appName}":
+“{majorVersion}.x"
+La plantilla de página de inicio predeterminada declara los siguientes
+bloques:store.home
+
+• list-context.image-list#demo
+• flex-layout.row#deals
+• rich-text#shelf-title
+• flex-layout.row#shelf
+• info-card#home
+• rich-text#question
+• rich-text#link
+• newsletter
+
+Esto significa que la página de inicio de su tienda predeterminada comprenderá
+los componentes definidos por estos bloques.
