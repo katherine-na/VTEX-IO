@@ -73,6 +73,11 @@ Un workspace es un espacio de trabajo aislado de otros espacios, por ejemplo com
 
 También puedes usar el comando ```vtex workspace``` para visualizar los comandos en tu consola.
 
+## Actualizar Workspace
+
+1. Bajar cambios recientes de la rama de **Integración**
+2. Crear una nueva rama o usar la rama con los cambios que necesites 
+
 [Más información](https://www.youtube.com/watch?v=YYo7Ii9_w3s&list=PLTmvmjdoacBR-Dimz5k_DV8-CyLGYfi9i&index=4)
 
 # Init & Link. 
